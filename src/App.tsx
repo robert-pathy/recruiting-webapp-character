@@ -1,25 +1,16 @@
-import { useState } from 'react';
 import './App.css';
-import { ATTRIBUTE_LIST, CLASS_LIST, SKILL_LIST } from './consts.js';
-
+import CharacterSheet from './CharacterSheet';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [num, setNum] = useState<number>(0);
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>React Coding Exercise</h1>
-      </header>
-      <section className="App-section">
-        <div>
-          Value:
-          {num}
-          <button>+</button>
-          <button>-</button>
+    return (
+        <div className="container-fluid p-4">
+            <header className="text-center mb-4">
+                <h1>D&D Character Creator</h1>
+            </header>
+            <CharacterSheet />
         </div>
-      </section>
-    </div>
-  );
+    );
 }
 
 export default App;
